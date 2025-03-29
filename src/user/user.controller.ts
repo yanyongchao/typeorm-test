@@ -35,6 +35,11 @@ export class UserController {
     return this.userService.initData2();
   }
 
+  @Get('initData3')
+  initData3() {
+    return this.userService.initData3();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id);

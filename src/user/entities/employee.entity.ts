@@ -12,12 +12,11 @@ export class Employee {
   @PrimaryGeneratedColumn()
   id: number;
 
-  
   @Column({
     length: 50,
   })
   name: string;
 
-  @ManyToOne(() => Department)
+  @ManyToOne(() => Department, (department) => department.employees)
   department: Department;
 }
